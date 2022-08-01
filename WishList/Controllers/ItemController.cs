@@ -12,7 +12,7 @@ namespace WishList.Controllers
 
         public ItemController(ApplicationDbContext context) { _context = context; }
 
-        public IActionResult Index(List<Item> container)
+        public IActionResult Index()
         {
             var model = _context.Items.ToList();
             return View("Index", model);
